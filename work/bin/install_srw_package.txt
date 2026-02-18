@@ -1,0 +1,8 @@
+@echo off
+setlocal
+echo.
+echo Migration started %DATE% %TIME%
+
+set ORACLE_HOME=E:\oracle\product\Middleware11gR2\Oracle_FRHome1
+cd /d %ORACLE_HOME%\reports\admin\sql
+%ORACLE_HOME%\bin\sqlplus winstd/winstd@f11mig @srwAPIins.sql

@@ -1,0 +1,7 @@
+      if FileExists(l_target_filename) then
+      begin
+         if DeleteFile(l_target_filename) then
+         begin
+            WriteLogInfo('Existing file ' + l_lower_filename + ' deleted in ' + p_targetdir);
+         end;
+      end;

@@ -1,0 +1,16 @@
+ LoadString(filename : varchar2) : varchar2;
+ Created form file
+ Compilation errors have occurred
+ FRM-30085: Unable to adjust form for output
+ FRM-30064: Unable to parse statement
+ frm-
+ ora-
+ 
+ 
+ 1815
+ 1789
+ 
+ 26
+ 8
+ 18
+ 

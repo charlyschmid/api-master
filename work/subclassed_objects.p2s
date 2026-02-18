@@ -1,0 +1,59 @@
+         -- Do not change subclassed Program Units
+         -- if the Property Program Unit Text is inherited
+         if Generic_QueryType(l_object) = D2FFO_PROG_UNIT then
+         begin
+            if Generic_IsSubclassed(l_object) then
+            begin
+               if Generic_IspropInherited(l_object, D2FP_PGU_TXT) then
+               begin
+                  WriteLogInfo('...no changes source is inherited');
+                  continue;
+               end;
+            end;
+         end;
+         
+         -- Do not change subclassed Triggers
+         -- if the Property "Trigger Text" is inherited
+         if Generic_QueryType(l_object) = D2FFO_TRIGGER then
+         begin
+            if Generic_IsSubclassed(l_object) then
+            begin
+               if Generic_IspropInherited(l_object, D2FP_TRG_TXT) then
+               begin
+                  WriteLogInfo('...no changes source is inherited');
+                  continue;
+               end;
+            end;
+         end;
+         
+         -- Do not change subclassed Triggers
+         -- if the Property "Record Group Query" is inherited
+         if Generic_QueryType(l_object) = D2FFO_REC_GROUP then
+         begin
+            if Generic_IsSubclassed(l_object) then
+            begin
+               if Generic_IspropInherited(l_object, D2FP_REC_GRP_QRY) then
+               begin
+                  WriteLogInfo('...no changes source is inherited');
+                  continue;
+               end;
+            end;
+         end;
+         
+         -- Do not change subclassed Menu Items
+         -- if the Property "Menu Item Code" is inherited
+         if Generic_QueryType(l_object) = D2FFO_MENU_ITEM then
+         begin
+            if Generic_IsSubclassed(l_object) then
+            begin
+               if Generic_GetNumProp(l_object, D2FP_COM_TYP) = D2FC_COTY_PLSQL then
+               begin
+                  if Generic_IspropInherited(l_object, D2FP_MNU_ITM_CODE) then
+                  begin
+                     WriteLogInfo('...no changes source is inherited');
+                     continue;
+                  end;
+               end;
+            end;
+         end;
+         
