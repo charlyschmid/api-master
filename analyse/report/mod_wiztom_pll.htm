@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Forms Analyse Report V2.0 vom - 18.02.2014 10:52:31</title>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<table border="1" class="header">
+<tr>
+<td border="0" colspan="3"><img alt="" height="78" src="tvd3.gif" width="224"></td>
+<td align="right" colspan="1" >
+<a href="uebersicht.htm">Übersicht</a><br>
+<a href="komplexitaet.htm">Applikations Komplexität Std</a><br>
+<a href="komplexitaet_fbs.htm">Applikations Komplexität FBS</a><br>
+<a href="gefundene.htm">Gefundene Build_ins</a><br>
+<a href="atrigger.htm">Obsolete Trigger</a><br>
+<a href="abutton.htm">Obsolete Items</a><br>
+<a href="aufwaende.htm">Aufwände</a><br>
+<a href="allgemein.htm">Allgemeine Modul Übersicht</a><br>
+</td>
+<td class="header_back"><a href="index.htm">zurück</a></td>
+</tr>
+<tr>
+<td class="header" colspan="4"><a name="top"></a>Uebersicht des Moduls : Wiztom.pll</td>
+</tr>
+</table>
+<a href="#"></a><br>
+<a href="#"></a><br>
+<br>
+<table>
+<tr>
+<th>Bereich</th>
+<th>Block Name</th>
+<th>Item Name</th>
+<th>Trigger / Progname</th>
+<th>Zeilen Nr.</th>
+<th>Zeile:</th>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_OFI_WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">14</td>
+<td>PROCEDURE PR_TERMINATE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">8</td>
+<td>PROCEDURE WIZTERMINATE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">2</td>
+<td>lh_windows 		ora_ffi.libhandletype;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">3</td>
+<td>fh_wizinit    	ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">4</td>
+<td>fh_wizterminate    	ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">4</td>
+<td>fh_wizterminate    	ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">5</td>
+<td>fh_wizsetlanguage    ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">8</td>
+<td>FUNCTION icd_wizinit(funcHandle IN ora_ffi.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">20</td>
+<td>PROCEDURE icd_wizterminate(funcHandle IN ora_ffi.funcHandleType);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">20</td>
+<td>PROCEDURE icd_wizterminate(funcHandle IN ora_ffi.funcHandleType);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">21</td>
+<td>	PRAGMA interface(c,icd_wizterminate,11265);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">24</td>
+<td>FUNCTION icd_wizsetlanguage(funcHandle IN ora_ffi.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">55</td>
+<td>PROCEDURE WIZTERMINATE IS</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">57</td>
+<td>	icd_wizterminate(fh_wizterminate);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">58</td>
+<td>END WIZTERMINATE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">78</td>
+<td>lh_windows := ora_ffi.load_library(NULL, pa_ofi_wiztom.v_pathname ||
+'\GEFI\DLL\wizxrta.dll');</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">82</td>
+<td>fh_wizinit :=
+ora_ffi.register_function(lh_windows,'_WIZINITIALIZEA@24',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">84</td>
+<td>ora_ffi.register_return(fh_wizinit,ORA_FFI.C_SHORT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">85</td>
+<td>ora_ffi.register_parameter(fh_wizinit,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">86</td>
+<td>ora_ffi.register_parameter(fh_wizinit,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">87</td>
+<td>ora_ffi.register_parameter(fh_wizinit,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">88</td>
+<td>ora_ffi.register_parameter(fh_wizinit,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">89</td>
+<td>ora_ffi.register_parameter(fh_wizinit,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">90</td>
+<td>ora_ffi.register_parameter(fh_wizinit,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">94</td>
+<td>fh_wizterminate :=
+ora_ffi.register_function(lh_windows,'_WIZTERMINATE@0',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">94</td>
+<td>fh_wizterminate :=
+ora_ffi.register_function(lh_windows,'_WIZTERMINATE@0',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">98</td>
+<td>fh_wizsetlanguage :=
+ora_ffi.register_function(lh_windows,'_WIZSETLANGUAGEA@4',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">100</td>
+<td>ora_ffi.register_return(fh_wizsetlanguage,ORA_FFI.C_SHORT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">101</td>
+<td>ora_ffi.register_parameter(fh_wizsetlanguage,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_OFI_WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">99</td>
+<td>	 pa_msg.aff_msg('SRW', 36, FALSE, NULL);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_OFI_WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">106</td>
+<td>PROCEDURE PR_TERMINATE</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_OFI_WIZTOM</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">110</td>
+<td>	wiztom.wizterminate;</td>
+</tr>
+</table>
+<br>
+<br>
+<table border="1" class="header">
+<tr>
+<td border="0"  colspan="3"></td>
+<td align="left" colspan="1" >
+<a href="uebersicht.htm">Übersicht</a><br>
+<a href="komplexitaet.htm">Applikations Komplexität</a><br>
+<a href="gefundene.htm">Gefundene Build_ins</a><br>
+<a href="atrigger.htm">Obsolete Trigger</a><br>
+</td>
+<td align="right" colspan="1" border="0">
+<a href="abutton.htm">Obsolete Items</a><br>
+<a href="aufwaende.htm">Aufwände</a><br>
+<a href="allgemein.htm">Allgemeine Modul Übersicht</a><br>
+</td>
+<td class="header_back"><a href="index.htm">zurück</a></td>
+</tr>
+<table border="1" class="header">
+<td>Trivadis AG</td>
+<td>Europa-Strasse 5</td>
+<td>Glattbrugg</td>
+<td><p class="footer"><a class="footer" href="mailto:perry.pakull@trivadis.com">Perry Pakull</a>
+2013</p></td>
+<td>18.02.2014 10:52:31</td>
+</table>
+</table>

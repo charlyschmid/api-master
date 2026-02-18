@@ -1,0 +1,39 @@
+--------------------------------------------------------------------------------
+-- ** Oracle Procedures and Funtions
+--------------------------------------------------------------------------------
+-- ** 13.07.2018   Perry Pakull, Trivadis        created for V3 compliance
+--------------------------------------------------------------------------------
+UNIT orcl;
+
+INTERFACE
+
+   --
+   -- Establish connection to Oracle database.
+   -- Connection exception is written to log, but execution is not stopped.
+   --
+   procedure connect_database (
+      p_connect                  : varchar2
+   );
+
+IMPLEMENTATION
+   
+   -----------------------------------------------------------------------------
+   -- Establish connection to Oracle database.
+   -- Connection exception is written to log, but execution is not stopped.
+   --
+   -- @param p_connect           Oracle Connection USERNAME/PASSWORD@TNSALIAS
+   -----------------------------------------------------------------------------
+   procedure connect_database (
+      p_connect                  : varchar2
+   );
+   begin
+      try
+         logadd('connect to database with connection ' + p_connect, loginfo);
+         API_Connect(p_connect);
+         logadd('database connection established', loginfo);
+      except
+         logadd('database connection error : ' + GetError, logwarning);
+      end;
+   end;
+   
+END.

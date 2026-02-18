@@ -1,0 +1,3522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Forms Analyse Report V2.0 vom - 18.02.2014 10:51:58</title>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<table border="1" class="header">
+<tr>
+<td border="0" colspan="3"><img alt="" height="78" src="tvd3.gif" width="224"></td>
+<td align="right" colspan="1" >
+<a href="uebersicht.htm">Übersicht</a><br>
+<a href="komplexitaet.htm">Applikations Komplexität Std</a><br>
+<a href="komplexitaet_fbs.htm">Applikations Komplexität FBS</a><br>
+<a href="gefundene.htm">Gefundene Build_ins</a><br>
+<a href="atrigger.htm">Obsolete Trigger</a><br>
+<a href="abutton.htm">Obsolete Items</a><br>
+<a href="aufwaende.htm">Aufwände</a><br>
+<a href="allgemein.htm">Allgemeine Modul Übersicht</a><br>
+</td>
+<td class="header_back"><a href="index.htm">zurück</a></td>
+</tr>
+<tr>
+<td class="header" colspan="4"><a name="top"></a>Uebersicht des Moduls : OFISRW.PLL</td>
+</tr>
+</table>
+<a href="#"></a><br>
+<a href="#"></a><br>
+<br>
+<table>
+<tr>
+<th>Bereich</th>
+<th>Block Name</th>
+<th>Item Name</th>
+<th>Trigger / Progname</th>
+<th>Zeilen Nr.</th>
+<th>Zeile:</th>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">42</td>
+<td>dll_handle := ora_ffi.find_library('KERNEL32.DLL');</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">43</td>
+<td>EXCEPTION WHEN ora_ffi.FFI_ERROR THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">44</td>
+<td>dll_handle := ora_ffi.load_library(NULL,'KERNEL32.DLL');</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">48</td>
+<td>winexec_handle := ORA_FFI.REGISTER_FUNCTION(dll_handle, 'WinExec', ORA_FFI.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">49</td>
+<td>ora_ffi.register_return(winexec_handle, ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">50</td>
+<td>ora_ffi.register_parameter(winexec_handle, ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">51</td>
+<td>ora_ffi.register_parameter(winexec_handle, ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">54</td>
+<td>when ora_ffi.ffi_error then</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_WINDOWS_FUNCTION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">9</td>
+<td>RETURN(rtrim(WIN_API_ENVIRONMENT.Read_Registry (RegPath,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_WINDOWS_FUNCTION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">9</td>
+<td>RETURN(rtrim(WIN_API_ENVIRONMENT.Read_Registry (RegPath,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_WINDOWS_FUNCTION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">20</td>
+<td>WIN_API_ENVIRONMENT.Write_Registry(RegPath,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_WINDOWS_FUNCTION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">27</td>
+<td>WindowStyle     IN      PLS_INTEGER DEFAULT WIN_API.SW_SHOWNORMAL,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_WINDOWS_FUNCTION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">31</td>
+<td>WIN_API_SHELL.WinExec (Command,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_WINDOWS_FUNCTION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">31</td>
+<td>WIN_API_SHELL.WinExec (Command,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_TRADUCTION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">27</td>
+<td>v_cod_lan_trt   VARCHAR2(2) := pa_srw_batch.g_cod_lan_trt;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">1</td>
+<td>PACKAGE pa_srw_batch</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">1</td>
+<td>PACKAGE PA_SRW_REPORT IS</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">7</td>
+<td>END pa_srw_report;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_WINDOWS_FUNCTION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">15</td>
+<td>WindowStyle     IN      PLS_INTEGER DEFAULT WIN_API.SW_SHOWNORMAL,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">1</td>
+<td>PACKAGE WIN_API_ENVIRONMENT IS</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">56</td>
+<td>END WIN_API_ENVIRONMENT;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">1</td>
+<td>PACKAGE BODY PA_SRW_REPORT IS</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">11</td>
+<td>SRW.RUN_REPORT(ps_cmd_str);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">18</td>
+<td>WHEN SRW.CONTEXT_FAILURE      THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">19</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.CONTEXT_FAILURE';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">21</td>
+<td>WHEN SRW.DO_SQL_FAILURE       THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">22</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.DO_SQL_FAILURE';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">24</td>
+<td>WHEN SRW.INTEGER_ERROR        THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">25</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.INTEGER_ERROR';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">27</td>
+<td>WHEN SRW.MAXROW_INERR         THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">28</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.MAXROW_INERR';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">30</td>
+<td>WHEN SRW.MAXROW_UNSET         THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">31</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.MAXROW_UNSET';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">33</td>
+<td>WHEN SRW.NULL_ARGUMENTS       THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">34</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.NULL_ARGUMENTS';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">36</td>
+<td>WHEN SRW.PROGRAM_ABORT        THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">37</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.PROGRAM_ABORT';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">39</td>
+<td>WHEN SRW.RUN_REPORT_FAILURE   THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">40</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.RUN_REPORT_FAILURE';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">42</td>
+<td>WHEN SRW.RUN_REPORT_BATCHNO   THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">43</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.RUN_REPORT_BATCHNO';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">45</td>
+<td>WHEN SRW.TRUNCATED_VALUE      THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">46</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.TRUNCATED_VALUE';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">48</td>
+<td>WHEN SRW.UNKNOWN_QUERY        THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">49</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.UNKNOWN_QUERY';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">51</td>
+<td>WHEN SRW.UNKNOWN_USER_EXIT    THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">51</td>
+<td>WHEN SRW.UNKNOWN_USER_EXIT    THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">52</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.UNKNOWN_USER_EXIT';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">52</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.UNKNOWN_USER_EXIT';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">54</td>
+<td>WHEN SRW.USER_EXIT_FAILURE    THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">54</td>
+<td>WHEN SRW.USER_EXIT_FAILURE    THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">55</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.USER_EXIT_FAILURE';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">55</td>
+<td>ps_err_msg := 'PA_REPORT.FB_RUN *** ' || 'SRW.USER_EXIT_FAILURE';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_REPORT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">61</td>
+<td>END PA_SRW_REPORT;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">1</td>
+<td>PACKAGE BODY pa_srw_batch</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">72</td>
+<td>,pa_srw_batch.g_num_sai</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">73</td>
+<td>,pa_srw_batch.g_ref_cli</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">74</td>
+<td>,pa_srw_batch.g_nom_soc</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">75</td>
+<td>,pa_srw_batch.g_cod_lan_soc</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">76</td>
+<td>,pa_srw_batch.g_cod_lan_uti</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">77</td>
+<td>,pa_srw_batch.g_cod_lan_trt</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">78</td>
+<td>,pa_srw_batch.g_nom_prg</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">79</td>
+<td>,pa_srw_batch.g_tit_prg</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">80</td>
+<td>,pa_srw_batch.g_idn_uti</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">81</td>
+<td>,pa_srw_batch.g_nom_uti</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">82</td>
+<td>,pa_srw_batch.g_nom_bdd</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">83</td>
+<td>,pa_srw_batch.g_cod_hea_yon</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">84</td>
+<td>,pa_srw_batch.g_cod_trl_yon</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">85</td>
+<td>,pa_srw_batch.g_tit_soc</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">86</td>
+<td>,pa_srw_batch.g_tit_pge</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">87</td>
+<td>,pa_srw_batch.g_txt_001</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">88</td>
+<td>,pa_srw_batch.g_par_001</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">89</td>
+<td>,pa_srw_batch.g_txt_002</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">90</td>
+<td>,pa_srw_batch.g_par_002</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">91</td>
+<td>,pa_srw_batch.g_txt_003</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">92</td>
+<td>,pa_srw_batch.g_par_003</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">93</td>
+<td>,pa_srw_batch.g_txt_004</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">94</td>
+<td>,pa_srw_batch.g_par_004</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">95</td>
+<td>,pa_srw_batch.g_txt_005</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">96</td>
+<td>,pa_srw_batch.g_par_005</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">97</td>
+<td>,pa_srw_batch.g_txt_006</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">98</td>
+<td>,pa_srw_batch.g_par_006</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">99</td>
+<td>,pa_srw_batch.g_txt_007</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">100</td>
+<td>,pa_srw_batch.g_par_007</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">101</td>
+<td>,pa_srw_batch.g_txt_008</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">102</td>
+<td>,pa_srw_batch.g_par_008</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">103</td>
+<td>,pa_srw_batch.g_txt_009</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">104</td>
+<td>,pa_srw_batch.g_par_009</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">105</td>
+<td>,pa_srw_batch.g_txt_010</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">106</td>
+<td>,pa_srw_batch.g_par_010</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">107</td>
+<td>,pa_srw_batch.g_txt_011</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">108</td>
+<td>,pa_srw_batch.g_par_011</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">109</td>
+<td>,pa_srw_batch.g_txt_012</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">110</td>
+<td>,pa_srw_batch.g_par_012</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">95</td>
+<td>DLL_HANDLE           ORA_FFI.LibHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">1</td>
+<td>PACKAGE WIN_API_Shell IS</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">111</td>
+<td>,pa_srw_batch.g_txt_013</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">112</td>
+<td>,pa_srw_batch.g_par_013</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">113</td>
+<td>,pa_srw_batch.g_txt_014</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">114</td>
+<td>,pa_srw_batch.g_par_014</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">115</td>
+<td>,pa_srw_batch.g_txt_015</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">116</td>
+<td>,pa_srw_batch.g_par_015</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">117</td>
+<td>,pa_srw_batch.g_txt_016</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">118</td>
+<td>,pa_srw_batch.g_par_016</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">119</td>
+<td>,pa_srw_batch.g_txt_017</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">120</td>
+<td>,pa_srw_batch.g_par_017</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">121</td>
+<td>,pa_srw_batch.g_txt_018</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">122</td>
+<td>,pa_srw_batch.g_par_018</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">123</td>
+<td>,pa_srw_batch.g_txt_019</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">124</td>
+<td>,pa_srw_batch.g_par_019</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">125</td>
+<td>,pa_srw_batch.g_txt_020</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">126</td>
+<td>,pa_srw_batch.g_par_020</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">127</td>
+<td>,pa_srw_batch.g_txt_021</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">128</td>
+<td>,pa_srw_batch.g_par_021</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">129</td>
+<td>,pa_srw_batch.g_txt_022</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">130</td>
+<td>,pa_srw_batch.g_par_022</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">131</td>
+<td>,pa_srw_batch.g_txt_023</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">132</td>
+<td>,pa_srw_batch.g_par_023</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">133</td>
+<td>,pa_srw_batch.g_txt_024</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">134</td>
+<td>,pa_srw_batch.g_par_024</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">135</td>
+<td>,pa_srw_batch.g_txt_025</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">136</td>
+<td>,pa_srw_batch.g_par_025</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">137</td>
+<td>,pa_srw_batch.g_txt_026</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">138</td>
+<td>,pa_srw_batch.g_par_026</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">139</td>
+<td>,pa_srw_batch.g_txt_027</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">140</td>
+<td>,pa_srw_batch.g_par_027</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">141</td>
+<td>,pa_srw_batch.g_txt_028</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">142</td>
+<td>,pa_srw_batch.g_par_028</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">143</td>
+<td>,pa_srw_batch.g_txt_029</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">144</td>
+<td>,pa_srw_batch.g_par_029</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">145</td>
+<td>,pa_srw_batch.g_txt_030</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">146</td>
+<td>,pa_srw_batch.g_par_030</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">147</td>
+<td>,pa_srw_batch.g_txt_031</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">148</td>
+<td>,pa_srw_batch.g_par_031</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">149</td>
+<td>,pa_srw_batch.g_txt_032</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">150</td>
+<td>,pa_srw_batch.g_par_032</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">151</td>
+<td>,pa_srw_batch.g_txt_033</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">152</td>
+<td>,pa_srw_batch.g_par_033</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">153</td>
+<td>,pa_srw_batch.g_txt_034</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">154</td>
+<td>,pa_srw_batch.g_par_034</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">155</td>
+<td>,pa_srw_batch.g_txt_035</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">156</td>
+<td>,pa_srw_batch.g_par_035</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">157</td>
+<td>,pa_srw_batch.g_txt_036</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">158</td>
+<td>,pa_srw_batch.g_par_036</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">159</td>
+<td>,pa_srw_batch.g_txt_037</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">160</td>
+<td>,pa_srw_batch.g_par_037</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">161</td>
+<td>,pa_srw_batch.g_txt_038</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">162</td>
+<td>,pa_srw_batch.g_par_038</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">163</td>
+<td>,pa_srw_batch.g_txt_039</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">164</td>
+<td>,pa_srw_batch.g_par_039</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">165</td>
+<td>,pa_srw_batch.g_txt_040</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">166</td>
+<td>,pa_srw_batch.g_par_040</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">171</td>
+<td>pa_ba_batch.pr_copy_ett(pa_srw_batch.g_num_ett_yon</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">172</td>
+<td>,pa_srw_batch.g_num_ett</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">173</td>
+<td>,pa_srw_batch.g_nom_ett_abr</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">174</td>
+<td>,pa_srw_batch.g_cod_tmt_ett</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">175</td>
+<td>,pa_srw_batch.g_num_cri</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">176</td>
+<td>,pa_srw_batch.g_val_cri);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">177</td>
+<td>IF  pa_srw_batch.g_num_ett_yon IS NOT NULL THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">178</td>
+<td>	     pa_srw_batch.g_tit_soc := pa_srw_batch.g_tit_soc||' ['||pa_srw_batch.g_nom_ett_abr;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">179</td>
+<td>IF  pa_srw_batch.g_cod_tmt_ett IN ('A','T') THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">180</td>
+<td>pa_srw_batch.g_tit_soc := pa_srw_batch.g_tit_soc||'('||pa_srw_batch.g_cod_tmt_ett||')';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">182</td>
+<td>pa_srw_batch.g_tit_soc := pa_srw_batch.g_tit_soc||']';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">192</td>
+<td>srw.message(0,'Pa_srw_batch : Erreur ORACLE ORA'||to_char(SQLCODE));</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">193</td>
+<td>raise srw.program_abort;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">198</td>
+<td>pa_srw_batch.g_par_001 := ps_par_001;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">199</td>
+<td>pa_srw_batch.g_par_002 := ps_par_002;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">200</td>
+<td>pa_srw_batch.g_par_003 := ps_par_003;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">201</td>
+<td>pa_srw_batch.g_par_004 := ps_par_004;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">202</td>
+<td>pa_srw_batch.g_par_005 := ps_par_005;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">203</td>
+<td>pa_srw_batch.g_par_006 := ps_par_006;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">204</td>
+<td>pa_srw_batch.g_par_007 := ps_par_007;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">205</td>
+<td>pa_srw_batch.g_par_008 := ps_par_008;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">206</td>
+<td>pa_srw_batch.g_par_009 := ps_par_009;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">207</td>
+<td>pa_srw_batch.g_par_010 := ps_par_010;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">208</td>
+<td>pa_srw_batch.g_par_011 := ps_par_011;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">209</td>
+<td>pa_srw_batch.g_par_012 := ps_par_012;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">210</td>
+<td>pa_srw_batch.g_par_013 := ps_par_013;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">211</td>
+<td>pa_srw_batch.g_par_014 := ps_par_014;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">212</td>
+<td>pa_srw_batch.g_par_015 := ps_par_015;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">213</td>
+<td>pa_srw_batch.g_par_016 := ps_par_016;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">214</td>
+<td>pa_srw_batch.g_par_017 := ps_par_017;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">215</td>
+<td>pa_srw_batch.g_par_018 := ps_par_018;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">216</td>
+<td>pa_srw_batch.g_par_019 := ps_par_019;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">217</td>
+<td>pa_srw_batch.g_par_020 := ps_par_020;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">218</td>
+<td>pa_srw_batch.g_par_021 := ps_par_021;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">219</td>
+<td>pa_srw_batch.g_par_022 := ps_par_022;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">220</td>
+<td>pa_srw_batch.g_par_023 := ps_par_023;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">221</td>
+<td>pa_srw_batch.g_par_024 := ps_par_024;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">222</td>
+<td>pa_srw_batch.g_par_025 := ps_par_025;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">223</td>
+<td>pa_srw_batch.g_par_026 := ps_par_026;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">224</td>
+<td>pa_srw_batch.g_par_027 := ps_par_027;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">225</td>
+<td>pa_srw_batch.g_par_028 := ps_par_028;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">226</td>
+<td>pa_srw_batch.g_par_029 := ps_par_029;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">8</td>
+<td>WindowStyle     IN      PLS_INTEGER DEFAULT WIN_API.SW_SHOWNORMAL,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">31</td>
+<td>END WIN_API_SHELL;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">1</td>
+<td>PACKAGE BODY WIN_API_SHELL is</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">4</td>
+<td>fh_WinExec           ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">5</td>
+<td>fh_WinHelp           ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">6</td>
+<td>fh_MousePos          ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">7</td>
+<td>fh_SM                ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">227</td>
+<td>pa_srw_batch.g_par_030 := ps_par_030;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">228</td>
+<td>pa_srw_batch.g_par_031 := ps_par_031;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">229</td>
+<td>pa_srw_batch.g_par_032 := ps_par_032;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">230</td>
+<td>pa_srw_batch.g_par_033 := ps_par_033;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">231</td>
+<td>pa_srw_batch.g_par_034 := ps_par_034;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">232</td>
+<td>pa_srw_batch.g_par_035 := ps_par_035;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">233</td>
+<td>pa_srw_batch.g_par_036 := ps_par_036;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">234</td>
+<td>pa_srw_batch.g_par_037 := ps_par_037;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">235</td>
+<td>pa_srw_batch.g_par_038 := ps_par_038;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">236</td>
+<td>pa_srw_batch.g_par_039 := ps_par_039;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">237</td>
+<td>pa_srw_batch.g_par_040 := ps_par_040;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">264</td>
+<td>raise srw.program_abort;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">266</td>
+<td>srw.message(0,'Pa_srw_batch : Erreur ORACLE ORA'||to_char(SQLCODE));</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">267</td>
+<td>raise srw.program_abort;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">279</td>
+<td>tool_env.getvar('COMPUTERNAME',pa_srw_batch.computername);	</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">280</td>
+<td>IF  pa_srw_batch.computername IS NULL THEN					</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">283</td>
+<td>pa_srw_batch.computername  := PA_WINDOWS_FUNCTION.ReadRegistry</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">289</td>
+<td>pa_srw_batch.computername := 'Unknow';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SRW_BATCH</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">293</td>
+<td>END PA_SRW_BATCH;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">7</td>
+<td>SRW.ATTR.MASK:=SRW.BBCOLOR_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">8</td>
+<td>SRW.ATTR.BBCOLOR:=COULEUR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">9</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">14</td>
+<td>SRW.ATTR.MASK:=SRW.BFCOLOR_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">15</td>
+<td>SRW.ATTR.BFCOLOR:=COULEUR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">16</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">21</td>
+<td>SRW.ATTR.MASK:=SRW.BORDPATT_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">22</td>
+<td>SRW.ATTR.BORDPATT:=DESSIN;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">23</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">28</td>
+<td>SRW.ATTR.MASK:=SRW.FILLPATT_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">29</td>
+<td>SRW.ATTR.FILLPATT:=FILLING;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">30</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">35</td>
+<td>SRW.ATTR.MASK:=SRW.FACE_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">36</td>
+<td>SRW.ATTR.FACE:=POLICE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">37</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">42</td>
+<td>SRW.ATTR.MASK:=SRW.FBCOLOR_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">43</td>
+<td>SRW.ATTR.FBCOLOR:=COULEUR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">44</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">49</td>
+<td>SRW.ATTR.MASK:=SRW.FFCOLOR_ATTR + SRW.FILLPATT_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">50</td>
+<td>SRW.ATTR.FFCOLOR:=COULEUR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">51</td>
+<td>SRW.ATTR.FILLPATT := 'SOLID';</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">52</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">57</td>
+<td>SRW.ATTR.MASK:=SRW.SZ_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">58</td>
+<td>SRW.ATTR.SZ:=TAILLE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">59</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">67</td>
+<td>SRW.ATTR.MASK:=SRW.STYLE_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">72</td>
+<td>SRW.ATTR.STYLE:=srw.plain_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">74</td>
+<td>SRW.ATTR.STYLE:=srw.italic_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">76</td>
+<td>SRW.ATTR.STYLE:=srw.oblique_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">78</td>
+<td>SRW.ATTR.STYLE:=srw.underline_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">26</td>
+<td>FUNCTION externWEX (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">30</td>
+<td>FUNCTION externWHPS(         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">35</td>
+<td>FUNCTION externWHPD(         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">40</td>
+<td>PROCEDURE externWMP (        hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">44</td>
+<td>FUNCTION externSM(           hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">59</td>
+<td>WindowStyle     IN      PLS_INTEGER DEFAULT WIN_API.SW_SHOWNORMAL,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">67</td>
+<td>fh_WinExec :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_WinExec',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">68</td>
+<td>ora_ffi.register_parameter(fh_WinExec,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">69</td>
+<td>ora_ffi.register_parameter(fh_WinExec,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">70</td>
+<td>ora_ffi.register_return(fh_WinExec,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">109</td>
+<td>fh_WinHelp :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_WinHelp',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">110</td>
+<td>ora_ffi.register_parameter(fh_WinHelp,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">111</td>
+<td>ora_ffi.register_parameter(fh_WinHelp,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">114</td>
+<td>ora_ffi.register_parameter(fh_WinHelp,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">116</td>
+<td>ora_ffi.register_parameter(fh_WinHelp,ORA_FFI.C_LONG);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">118</td>
+<td>ora_ffi.register_return(fh_WinHelp,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">80</td>
+<td>SRW.ATTR.STYLE:=srw.outline_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">82</td>
+<td>SRW.ATTR.STYLE:=srw.shadow_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">84</td>
+<td>SRW.ATTR.STYLE:=srw.inverted_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">86</td>
+<td>SRW.ATTR.STYLE:=srw.overstrike_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">88</td>
+<td>SRW.ATTR.STYLE:=srw.blink_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">90</td>
+<td>SRW.ATTR.STYLE:=srw.plain_style;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">93</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">99</td>
+<td>SRW.ATTR.MASK:=SRW.GCOLOR_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">100</td>
+<td>SRW.ATTR.GCOLOR:=COULEUR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">101</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">108</td>
+<td>SRW.ATTR.MASK:=SRW.GSPACING_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">111</td>
+<td>SRW.ATTR.GSPACING:=srw.single_spacing;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">113</td>
+<td>SRW.ATTR.GSPACING:=srw.onehlf_spacing;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">115</td>
+<td>SRW.ATTR.GSPACING:=srw.double_spacing;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">117</td>
+<td>SRW.ATTR.GSPACING:=srw.custom_spacing;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">118</td>
+<td>SRW.ATTR.CUSTOM  :=TAILLE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">120</td>
+<td>SRW.ATTR.GSPACING:=srw.single_spacing;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">122</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">129</td>
+<td>SRW.ATTR.MASK:=SRW.WEIGHT_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">132</td>
+<td>SRW.ATTR.WEIGHT:=srw.ultralight_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">134</td>
+<td>SRW.ATTR.WEIGHT:=srw.extralight_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">136</td>
+<td>SRW.ATTR.WEIGHT:=srw.light_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">138</td>
+<td>SRW.ATTR.WEIGHT:=srw.demilight_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">140</td>
+<td>SRW.ATTR.WEIGHT:=srw.medium_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">142</td>
+<td>SRW.ATTR.WEIGHT:=srw.demibold_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">144</td>
+<td>SRW.ATTR.WEIGHT:=srw.bold_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">146</td>
+<td>SRW.ATTR.WEIGHT:=srw.extrabold_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">148</td>
+<td>SRW.ATTR.WEIGHT:=srw.medium_weight;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">150</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">155</td>
+<td>SRW.ATTR.MASK:=SRW.BORDERWIDTH_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">156</td>
+<td>SRW.ATTR.BORDERWIDTH:=TAILLE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">157</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">163</td>
+<td>SRW.ATTR.MASK:=SRW.FORMATMASK_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">164</td>
+<td>SRW.ATTR.FORMATMASK:=FORMAT;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">165</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">172</td>
+<td>SRW.ATTR.MASK:=SRW.HJUST_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">175</td>
+<td>SRW.ATTR.HJUST:=srw.left_hjust;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">177</td>
+<td>SRW.ATTR.HJUST:=srw.center_hjust;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">179</td>
+<td>SRW.ATTR.HJUST:=srw.right_hjust;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">181</td>
+<td>SRW.ATTR.HJUST:=srw.flush_hjust;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">183</td>
+<td>SRW.ATTR.HJUST:=srw.left_hjust;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">185</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">190</td>
+<td>SRW.ATTR.MASK:=SRW.AFTCODE_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">191</td>
+<td>SRW.ATTR.AFTCODE:=CODE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">192</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">197</td>
+<td>SRW.ATTR.MASK:=SRW.BEFCODE_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">198</td>
+<td>SRW.ATTR.BEFCODE:=CODE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">199</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">206</td>
+<td>SRW.ATTR.MASK:=SRW.TEXT_ATTR;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">209</td>
+<td>SRW.ATTR.TEXT:=srw.plain_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">211</td>
+<td>SRW.ATTR.TEXT:=srw.reverse_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">213</td>
+<td>SRW.ATTR.TEXT:=srw.bold_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">215</td>
+<td>SRW.ATTR.TEXT:=srw.underline_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">217</td>
+<td>SRW.ATTR.TEXT:=srw.reversebold_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">219</td>
+<td>SRW.ATTR.TEXT:=srw.underlinereverse_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">221</td>
+<td>SRW.ATTR.TEXT:=srw.underlinebold_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">162</td>
+<td>fh_MousePos :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_Mouse_x_y',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">163</td>
+<td>ora_ffi.register_parameter(fh_MousePos,ORA_FFI.C_INT_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">164</td>
+<td>ora_ffi.register_parameter(fh_MousePos,ORA_FFI.C_INT_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">195</td>
+<td>fh_SM :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_SendMsg',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">196</td>
+<td>ora_ffi.register_parameter(fh_SM,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">197</td>
+<td>ora_ffi.register_parameter(fh_SM,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">198</td>
+<td>ora_ffi.register_parameter(fh_SM,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">199</td>
+<td>ora_ffi.register_parameter(fh_SM,ORA_FFI.C_LONG);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">200</td>
+<td>ora_ffi.register_return(fh_SM,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_SHELL</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">224</td>
+<td>END WIN_API_SHELL;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">1</td>
+<td>PACKAGE BODY WIN_API_ENVIRONMENT is</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">4</td>
+<td>fh_ReadINIFile       ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">5</td>
+<td>fh_WriteINIFile      ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">6</td>
+<td>fh_GetUserName       ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">7</td>
+<td>fh_GetEnvStr         ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">8</td>
+<td>fh_GetWinDir         ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">9</td>
+<td>fh_GetTempDir        ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">223</td>
+<td>SRW.ATTR.TEXT:=srw.reverseboldunderline_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">225</td>
+<td>SRW.ATTR.TEXT:=srw.plain_texta;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_SET_ATTR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">227</td>
+<td>SRW.SET_ATTR(0, SRW.ATTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_MSG</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">18</td>
+<td>WHERE M.COD_APP = 'SRW'</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_MSG</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">60</td>
+<td>v_msg_txt :=   'SRW-0: Le  Message d''erreur No '</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_MSG</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">87</td>
+<td>SRW.MESSAGE(p_msg_num,v_msg_txt);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_MSG</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">93</td>
+<td>RAISE srw.program_abort;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">10</td>
+<td>fh_GetNetConn        ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">11</td>
+<td>fh_ReadReg           ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">12</td>
+<td>fh_WriteReg          ora_ffi.funcHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">36</td>
+<td>FUNCTION externRIF (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">44</td>
+<td>FUNCTION externWIF (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">50</td>
+<td>FUNCTION externGWU (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">54</td>
+<td>FUNCTION externGES (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">59</td>
+<td>FUNCTION externGWD (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">63</td>
+<td>FUNCTION externGTD (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">67</td>
+<td>FUNCTION externGNC (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">72</td>
+<td>FUNCTION externRRG (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">80</td>
+<td>FUNCTION externWRG (         hFunc           IN      ORA_FFI.funcHandleType,</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">13</td>
+<td>	  Text_IO.Fclose(v_file);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">5</td>
+<td>v_file   Text_IO.File_Type;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">9</td>
+<td>v_file := Text_IO.Fopen(p_nom_fic, 'r');</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">12</td>
+<td>IF Text_IO.Is_Open(v_file) THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">13</td>
+<td>	  Text_IO.Fclose(v_file);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">22</td>
+<td>IF Text_IO.Is_Open(v_file) THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">23</td>
+<td>	    Text_IO.Fclose(v_file);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">23</td>
+<td>	    Text_IO.Fclose(v_file);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">114</td>
+<td>fh_ReadINIFile :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_ReadINIFile',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">115</td>
+<td>ora_ffi.register_parameter(fh_ReadINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">116</td>
+<td>ora_ffi.register_parameter(fh_ReadINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">117</td>
+<td>ora_ffi.register_parameter(fh_ReadINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">118</td>
+<td>ora_ffi.register_parameter(fh_ReadINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">119</td>
+<td>ora_ffi.register_parameter(fh_ReadINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">120</td>
+<td>ora_ffi.register_parameter(fh_ReadINIFile,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">121</td>
+<td>ora_ffi.register_return(fh_ReadINIFile,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">166</td>
+<td>fh_WriteINIFile :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_WriteINIFile',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">167</td>
+<td>ora_ffi.register_parameter(fh_WriteINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">168</td>
+<td>ora_ffi.register_parameter(fh_WriteINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">169</td>
+<td>ora_ffi.register_parameter(fh_WriteINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">170</td>
+<td>ora_ffi.register_parameter(fh_WriteINIFile,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">171</td>
+<td>ora_ffi.register_return(fh_WriteINIFile,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">211</td>
+<td>fh_GetUserName :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_GetWinuser',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">212</td>
+<td>ora_ffi.register_parameter(fh_GetUserName,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">213</td>
+<td>ora_ffi.register_parameter(fh_GetUserName,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">214</td>
+<td>ora_ffi.register_return(fh_GetUserName,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">255</td>
+<td>fh_GetWinDir :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_WinDir',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">256</td>
+<td>ora_ffi.register_parameter(fh_GetWinDir,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">257</td>
+<td>ora_ffi.register_parameter(fh_GetWinDir,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">258</td>
+<td>ora_ffi.register_return(fh_GetWinDir,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">296</td>
+<td>fh_GetTempDir :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_TmpDir',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">297</td>
+<td>ora_ffi.register_parameter(fh_GetTempDir,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">298</td>
+<td>ora_ffi.register_parameter(fh_GetTempDir,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">299</td>
+<td>ora_ffi.register_return(fh_GetTempDir,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">338</td>
+<td>fh_GetEnvStr :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_GetDOSEnv',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">339</td>
+<td>ora_ffi.register_parameter(fh_GetEnvStr,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">340</td>
+<td>ora_ffi.register_parameter(fh_GetEnvStr,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">341</td>
+<td>ora_ffi.register_parameter(fh_GetEnvStr,ORA_FFI.C_LONG);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">342</td>
+<td>ora_ffi.register_return(fh_GetEnvStr,ORA_FFI.C_LONG);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">382</td>
+<td>fh_GetNetConn :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_WNetGetConnection',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">383</td>
+<td>ora_ffi.register_parameter(fh_GetNetConn,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">384</td>
+<td>ora_ffi.register_parameter(fh_GetNetConn,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">385</td>
+<td>ora_ffi.register_parameter(fh_GetNetConn,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">386</td>
+<td>ora_ffi.register_return(fh_GetNetConn,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">431</td>
+<td>fh_ReadReg :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_GetRegKey',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">432</td>
+<td>ora_ffi.register_parameter(fh_ReadReg,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">433</td>
+<td>ora_ffi.register_parameter(fh_ReadReg,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">434</td>
+<td>ora_ffi.register_parameter(fh_ReadReg,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">435</td>
+<td>ora_ffi.register_parameter(fh_ReadReg,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">436</td>
+<td>ora_ffi.register_parameter(fh_ReadReg,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">437</td>
+<td>ora_ffi.register_return(fh_ReadReg,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">514</td>
+<td>fh_WriteReg :=
+ora_ffi.register_function(Win_API.DLL_HANDLE,'d2kwutil_SetRegKey',ora_ffi.PASCAL_STD);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">515</td>
+<td>ora_ffi.register_parameter(fh_WriteReg,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">516</td>
+<td>ora_ffi.register_parameter(fh_WriteReg,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">517</td>
+<td>ora_ffi.register_parameter(fh_WriteReg,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">518</td>
+<td>ora_ffi.register_parameter(fh_WriteReg,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">519</td>
+<td>ora_ffi.register_parameter(fh_WriteReg,ORA_FFI.C_CHAR_PTR);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">520</td>
+<td>ora_ffi.register_parameter(fh_WriteReg,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">521</td>
+<td>ora_ffi.register_return(fh_WriteReg,ORA_FFI.C_INT);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API_ENVIRONMENT</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">567</td>
+<td>END WIN_API_ENVIRONMENT;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">17</td>
+<td>LoadCount      in      BOOLEAN DEFAULT TRUE) return ORA_FFI.LibHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">63</td>
+<td>DLL_HANDLE := ORA_FFI.find_library(DLL_NAME);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">85</td>
+<td>FUNCTION  Attempt_DLL_Load   (TargetPath in out VARCHAR2, TargetDLL in VARCHAR2, LoadCount in
+BOOLEAN DEFAULT TRUE) return ORA_FFI.LibHandleType is</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">86</td>
+<td>hDLL    ORA_FFI.LibHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">97</td>
+<td>hDLL := ORA_FFI.LOAD_LIBRARY(TargetPath, TargetDLL);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">130</td>
+<td>hKern       ora_ffi.libHandleType;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">133</td>
+<td>if not ora_ffi.is_null_ptr(hKern) then</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">140</td>
+<td>if not ora_ffi.is_null_ptr(hKern) then</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WIN_API</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">191</td>
+<td>if not ora_ffi.is_null_ptr(DLL_HANDLE) then</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">3</td>
+<td>dll_handle ORA_FFI.LIBHANDLETYPE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">4</td>
+<td>winexec_handle ORA_FFI.FUNCHANDLETYPE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>WINEXEC_OFISA</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">7</td>
+<td>FUNCTION WinExecICD(handle in ORA_FFI.FUNCHANDLETYPE,</td>
+</tr>
+</table>
+<br>
+<br>
+<table border="1" class="header">
+<tr>
+<td border="0"  colspan="3"></td>
+<td align="left" colspan="1" >
+<a href="uebersicht.htm">Übersicht</a><br>
+<a href="komplexitaet.htm">Applikations Komplexität</a><br>
+<a href="gefundene.htm">Gefundene Build_ins</a><br>
+<a href="atrigger.htm">Obsolete Trigger</a><br>
+</td>
+<td align="right" colspan="1" border="0">
+<a href="abutton.htm">Obsolete Items</a><br>
+<a href="aufwaende.htm">Aufwände</a><br>
+<a href="allgemein.htm">Allgemeine Modul Übersicht</a><br>
+</td>
+<td class="header_back"><a href="index.htm">zurück</a></td>
+</tr>
+<table border="1" class="header">
+<td>Trivadis AG</td>
+<td>Europa-Strasse 5</td>
+<td>Glattbrugg</td>
+<td><p class="footer"><a class="footer" href="mailto:perry.pakull@trivadis.com">Perry Pakull</a>
+2013</p></td>
+<td>18.02.2014 10:51:58</td>
+</table>
+</table>

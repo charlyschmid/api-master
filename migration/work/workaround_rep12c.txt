@@ -1,0 +1,21 @@
+Option 1 : Move to Database
+
+Option 2 : Move Cursor Def from Package to Program Unit
+--------------------------------------------------------------------------------
+1. Identify Source Object 
+   Package Specification 
+   Contains Cursor
+   Parse Source Code
+   Get the names of the Cursor Definitions
+   Store names in list
+   Get Cursor Definition 
+   Store in list
+   Remove cursor definition from package Specification
+   save Source Object 
+   
+2. Get a list of all Source Objects
+   Find the cursorname packagename.cursorname
+   remove packagename
+   find the declaration section
+   insert cursor defintion
+   

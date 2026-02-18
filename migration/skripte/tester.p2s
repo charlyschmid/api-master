@@ -1,0 +1,42 @@
+USES mig_config;
+USES mig_logger;
+USES mig_files;
+USES mig_util;
+
+VAR
+   l_files                       TStringList;
+   l_index                       number;
+BEGIN
+   WriteLogInfo('mig_olb_filter=' + GetOlbFilter);
+   WriteLogInfo('mig_pll_filter=' + GetPllFilter);
+   WriteLogInfo('mig_mmb_filter=' + GetMmbFilter);
+   WriteLogInfo('mig_fmb_filter=' + GetFmbFilter);
+   WriteLogInfo('mig_rdf_filter=' + GetRdfFilter);
+   
+   WritelogInfo('do migrate olb=' + booleanToChar(GetDoMigrateOlb));
+   WritelogInfo('do migrate pll=' + booleanToChar(GetDoMigratePll));
+   WritelogInfo('do migrate mmb=' + booleanToChar(GetDoMigrateMmb));
+   WritelogInfo('do migrate fmb=' + booleanToChar(GetDoMigrateFmb));
+   WritelogInfo('do migrate rdf=' + booleanToChar(GetDoMigrateRdf));
+
+   l_files := GetSourceFiles('*.olb');
+   WriteLogInfo('source files found : ' + to_char (l_files.count));
+   
+   l_files := GetSourceFiles('*.pll');
+   WriteLogInfo('source files found : ' + to_char (l_files.count));
+   
+   l_files := GetSourceFiles('*.mmb');
+   WriteLogInfo('source files found : ' + to_char (l_files.count));
+   
+   l_files := GetSourceFiles('*.fmb');
+   l_files := RemoveRefModules(l_files);
+   WriteLogInfo('source files found : ' + to_char (l_files.count));
+   
+   l_files := GetListFromFile(GetRefModulesFilename);
+   WriteLogInfo('files found in file: ' + to_char (l_files.count));
+   l_files.free;
+   
+   l_files := GetSourceFiles('*rdf');
+   WriteLogInfo('source files found : ' + to_char (l_files.count));
+   
+END.

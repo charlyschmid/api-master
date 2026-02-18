@@ -1,0 +1,367 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Forms Analyse Report V2.0 vom - 18.02.2014 10:50:24</title>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<table border="1" class="header">
+<tr>
+<td border="0" colspan="3"><img alt="" height="78" src="tvd3.gif" width="224"></td>
+<td align="right" colspan="1" >
+<a href="uebersicht.htm">Übersicht</a><br>
+<a href="komplexitaet.htm">Applikations Komplexität Std</a><br>
+<a href="komplexitaet_fbs.htm">Applikations Komplexität FBS</a><br>
+<a href="gefundene.htm">Gefundene Build_ins</a><br>
+<a href="atrigger.htm">Obsolete Trigger</a><br>
+<a href="abutton.htm">Obsolete Items</a><br>
+<a href="aufwaende.htm">Aufwände</a><br>
+<a href="allgemein.htm">Allgemeine Modul Übersicht</a><br>
+</td>
+<td class="header_back"><a href="index.htm">zurück</a></td>
+</tr>
+<tr>
+<td class="header" colspan="4"><a name="top"></a>Uebersicht des Moduls : ACT502.FMB</td>
+</tr>
+</table>
+<a href="#"></a><br>
+<a href="#"></a><br>
+<br>
+<table>
+<tr>
+<th>Bereich</th>
+<th>Block Name</th>
+<th>Item Name</th>
+<th>Trigger / Progname</th>
+<th>Zeilen Nr.</th>
+<th>Zeile:</th>
+</tr>
+<tr>
+<td>Block Trigger</td>
+<td>BL_SAI</td>
+<td class="data"></td>
+<td>ON-CHECK-DELETE-MASTER</td>
+<td class="data">5</td>
+<td>Dummy_Define CHAR(1);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">92</td>
+<td>v_file_name := WIN_API_UTILITY.Generate_Temp_Filename(WIN_API_ENVIRONMENT.Get_Temp_Directory(
+TRUE ), 'ofi', TRUE);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">92</td>
+<td>v_file_name := WIN_API_UTILITY.Generate_Temp_Filename(WIN_API_ENVIRONMENT.Get_Temp_Directory(
+TRUE ), 'ofi', TRUE);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">92</td>
+<td>v_file_name := WIN_API_UTILITY.Generate_Temp_Filename(WIN_API_ENVIRONMENT.Get_Temp_Directory(
+TRUE ), 'ofi', TRUE);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">96</td>
+<td>TEXT_IO.PUT_LINE( pa_pgm_var.v_text_out, 'Fichier '||v_file_name );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">96</td>
+<td>TEXT_IO.PUT_LINE( pa_pgm_var.v_text_out, 'Fichier '||v_file_name );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">98</td>
+<td>IF NOT TEXT_IO.IS_OPEN(pa_pgm_var.v_text_out) THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">99</td>
+<td>pa_pgm_var.v_text_out := TEXT_IO.FOPEN( v_file_name, p_out_mod );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">174</td>
+<td>TEXT_IO.PUT_LINE( pa_pgm_var.v_text_out, LTRIM(v_str1,';') );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">174</td>
+<td>TEXT_IO.PUT_LINE( pa_pgm_var.v_text_out, LTRIM(v_str1,';') );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">175</td>
+<td>TEXT_IO.PUT_LINE( pa_pgm_var.v_text_out, LTRIM(v_str2,';') );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">175</td>
+<td>TEXT_IO.PUT_LINE( pa_pgm_var.v_text_out, LTRIM(v_str2,';') );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">178</td>
+<td>TEXT_IO.PUT_LINE( pa_pgm_var.v_text_out, LTRIM(v_str3,';') );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">178</td>
+<td>TEXT_IO.PUT_LINE( pa_pgm_var.v_text_out, LTRIM(v_str3,';') );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">189</td>
+<td>IF TEXT_IO.IS_OPEN(pa_pgm_var.v_text_out) THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">190</td>
+<td>TEXT_IO.FCLOSE(pa_pgm_var.v_text_out);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">190</td>
+<td>TEXT_IO.FCLOSE(pa_pgm_var.v_text_out);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">203</td>
+<td>IF TEXT_IO.IS_OPEN(pa_pgm_var.v_text_out) THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">204</td>
+<td>TEXT_IO.FCLOSE(pa_pgm_var.v_text_out);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">204</td>
+<td>TEXT_IO.FCLOSE(pa_pgm_var.v_text_out);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">210</td>
+<td>IF TEXT_IO.IS_OPEN(pa_pgm_var.v_text_out) THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">211</td>
+<td>TEXT_IO.FCLOSE(pa_pgm_var.v_text_out);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">211</td>
+<td>TEXT_IO.FCLOSE(pa_pgm_var.v_text_out);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">217</td>
+<td>IF TEXT_IO.IS_OPEN(pa_pgm_var.v_text_out) THEN</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">218</td>
+<td>TEXT_IO.FCLOSE(pa_pgm_var.v_text_out);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">218</td>
+<td>TEXT_IO.FCLOSE(pa_pgm_var.v_text_out);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_VAR</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">6</td>
+<td>v_text_out          TEXT_IO.FILE_TYPE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_AFF_SIZ</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">11</td>
+<td>p_win_ini_siz := GET_WINDOW_PROPERTY('WI_MAIN', WIDTH);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_AFF_SIZ</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">22</td>
+<td>v_new_siz     := GET_WINDOW_PROPERTY('WI_MAIN', WIDTH);</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_REC_ASSOCIATION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">63</td>
+<td>v_win_height := GET_WINDOW_PROPERTY( v_win_id, HEIGHT );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_REC_ASSOCIATION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">64</td>
+<td>v_win_width  := GET_WINDOW_PROPERTY( v_win_id, WIDTH  );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_REC_ASSOCIATION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">65</td>
+<td>v_win_x_pos  := GET_WINDOW_PROPERTY( v_win_id, X_POS  );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_REC_ASSOCIATION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">66</td>
+<td>v_win_y_pos  := GET_WINDOW_PROPERTY( v_win_id, Y_POS  );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_REC_ASSOCIATION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">68</td>
+<td>v_mdi_x_pos  := GET_WINDOW_PROPERTY( FORMS_MDI_WINDOW, X_POS  );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_REC_ASSOCIATION</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">69</td>
+<td>v_mdi_y_pos  := GET_WINDOW_PROPERTY( FORMS_MDI_WINDOW, Y_POS  );</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>PA_PGM_FILE</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">20</td>
+<td>file_id           TEXT_IO.FILE_TYPE;</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>CLEAR_ALL_MASTER_DETAILS</td>
+<td class="data"></td>
+<td class="data"></td>
+<td class="data">74</td>
+<td>IF coordop NOT IN ('CLEAR_RECORD', 'SYNCHRONIZE_BLOCKS') THEN</td>
+</tr>
+</table>
+<br>
+<br>
+<table border="1" class="header">
+<tr>
+<td border="0"  colspan="3"></td>
+<td align="left" colspan="1" >
+<a href="uebersicht.htm">Übersicht</a><br>
+<a href="komplexitaet.htm">Applikations Komplexität</a><br>
+<a href="gefundene.htm">Gefundene Build_ins</a><br>
+<a href="atrigger.htm">Obsolete Trigger</a><br>
+</td>
+<td align="right" colspan="1" border="0">
+<a href="abutton.htm">Obsolete Items</a><br>
+<a href="aufwaende.htm">Aufwände</a><br>
+<a href="allgemein.htm">Allgemeine Modul Übersicht</a><br>
+</td>
+<td class="header_back"><a href="index.htm">zurück</a></td>
+</tr>
+<table border="1" class="header">
+<td>Trivadis AG</td>
+<td>Europa-Strasse 5</td>
+<td>Glattbrugg</td>
+<td><p class="footer"><a class="footer" href="mailto:perry.pakull@trivadis.com">Perry Pakull</a>
+2013</p></td>
+<td>18.02.2014 10:50:25</td>
+</table>
+</table>

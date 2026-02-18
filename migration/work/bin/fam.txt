@@ -1,0 +1,3 @@
+C:\Program Files\ORCL Toolbox\FormsAPI Master V3.0 (64bits)
+C:\Program Files (x86)\ORCL Toolbox\FormsAPI Master V3.0
+C:\Program Files (x86)\ORCL Toolbox\FormsAPI Master V2.0
