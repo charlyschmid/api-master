@@ -18,19 +18,19 @@ rem FormsAPIMaster Environment
 set API_ORACLE_HOME="D:\Middleware\Oracle_FRHome1\BIN"
 set FAM_API=11g
 set FAM_EXE="C:\Program Files (x86)\ORCL Toolbox\FormsAPI Master V3.0\FapiMaster.exe"
-set MIG_DBCONNECT=winstd/winstd@f11mig
+set MIG_DBCONNECT=<dbuser>/<dbpwd>@<tns database>
 rem Logging Environment
 set LOG_DATE=%DATE:~6,4%%DATE:~3,2%%DATE:~0,2%
 set LOG_HOUR1=%TIME:~0,1%
 set LOG_HOUR2=%TIME:~1,1%
 if "%LOG_HOUR1%" == " " set LOG_HOUR1=0
 set LOG_TIME=%LOG_HOUR1%%LOG_HOUR2%%TIME:~3,2%
-rem GEFI Environment
-set GEFI_LOT1_DIR=Z:\Lot1
-set GEFI_LOT2_DIR=Z:\Lot2
-set GEFI_LOT3_DIR=Z:\Lot3
-set GEFI_LOT4_DIR=Z:\Lot4
-set GEFI_DEPLOYMENT_DIR=D:\Deployment\Appl
+rem Environment
+set LOT1_DIR=Z:\Lot1
+set LOT2_DIR=Z:\Lot2
+set LOT3_DIR=Z:\Lot3
+set LOT4_DIR=Z:\Lot4
+set DEPLOYMENT_DIR=D:\Deployment\Appl
 rem Extensions
 set PLL=.pll
 set MMB=.mmb
