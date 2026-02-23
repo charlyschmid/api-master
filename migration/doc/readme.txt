@@ -1,4 +1,4 @@
-Windows Script Files for OFISA GEFI Migration
+Windows Script Files for Forms 6i Upgrade to Forms 11g
 --------------------------------------------------------------------------------
 Perry Pakull, Trivadis AG
 19.07.2018
@@ -8,7 +8,7 @@ Prerequisites
 1. mig_home
    Variable "mig_home" must be defined in the system environment settings.
    Otherwise the scripts will not run properly.
-   
+
 2. Add %mig_home%\bin to the system path
 
 
@@ -46,4 +46,3 @@ readme.txt
 reports.bat
 Starte Migration.bat
 tester.bat
-
