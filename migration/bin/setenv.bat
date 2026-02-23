@@ -2,7 +2,7 @@ rem Migration Environment
 set MIG_BIN_DIR=%MIG_HOME%\bin
 set MIG_LOG_DIR=%MIG_HOME%\logs
 set MIG_LIB_DIR=%MIG_HOME%\libfiles
-set MIG_SKRIPT_DIR=%MIG_HOME%\skripte
+set MIG_SCRIPT_DIR=%MIG_HOME%\scripts
 set MIG_SOURCE_DIR=%MIG_HOME%\01source
 set MIG_TARGET_DIR=%MIG_HOME%\04migrated
 set MIG_REPTARGET_DIR=%MIG_HOME%\05reports

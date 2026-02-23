@@ -5,7 +5,7 @@ echo Analyze Module Dependencies started %DATE% %TIME%
 
 call %MIG_HOME%\bin\setenv.bat
 
-set MIG_CMD=%MIG_SKRIPT_DIR%\mig_dependencies.p2s
+set MIG_CMD=%MIG_SCRIPT_DIR%\mig_dependencies.p2s
 set LOGFILE=dependencies_%LOG_DATE%_%LOG_TIME%.log
 set API_ORACLE_HOME="D:\Dev6i\BIN"
 set FAM_API=6i

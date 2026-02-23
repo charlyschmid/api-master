@@ -5,7 +5,7 @@ echo Tester started %DATE% %TIME%
 
 call %MIG_HOME%\bin\setenv.bat
 
-set MIG_CMD=%MIG_SKRIPT_DIR%\tester.p2s
+set MIG_CMD=%MIG_SCRIPT_DIR%\tester.p2s
 set LOGFILE=tester_%LOG_DATE%_%LOG_TIME%.log
 
 echo.

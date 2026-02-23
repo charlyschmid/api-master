@@ -52,7 +52,7 @@ echo Migrate with settings from config.ini
 goto MIGRATION_RUN
 
 :MIGRATION_RUN
-set MIG_CMD=%MIG_SKRIPT_DIR%\mig_main.p2s
+set MIG_CMD=%MIG_SCRIPT_DIR%\mig_main.p2s
 set LOGFILE=migration_%LOG_DATE%_%LOG_TIME%.log
 
 echo.

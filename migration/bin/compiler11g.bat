@@ -6,7 +6,7 @@ echo Generate Compiler Commands for Forms 11g
 call %MIG_HOME%\bin\setenv.bat
 
 set CMP_TARGET=11g
-set MIG_CMD=%MIG_SKRIPT_DIR%\mig_generator.p2s
+set MIG_CMD=%MIG_SCRIPT_DIR%\mig_generator.p2s
 set LOGFILE=generator_%LOG_DATE%_%LOG_TIME%.log
 
 echo.

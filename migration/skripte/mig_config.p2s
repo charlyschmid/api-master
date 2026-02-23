@@ -147,7 +147,7 @@ INTERFACE
    function GetBinDir
       : varchar2;
    
-   function GetSkriptDir
+   function GetScriptDir
       : varchar2;
    
    function GetLogDir
@@ -462,7 +462,7 @@ IMPLEMENTATION
    function GetExcludesFilename 
       : varchar2;
    begin
-      result := GetStringValue('mig_excludes', 'main', 'mig_excludes', '%MIG_HOME%\skripte\excludes.cfg');
+      result := GetStringValue('mig_excludes', 'main', 'mig_excludes', '%MIG_HOME%\scripts\excludes.cfg');
    end;
 
    -----------------------------------------------------------------------------
@@ -471,7 +471,7 @@ IMPLEMENTATION
    function GetRefModulesFilename 
       : varchar2;
    begin
-      result := GetStringValue('mig_refmodules', 'main', 'mig_refmodules', '%MIG_HOME%\skripte\refmodules.cfg');
+      result := GetStringValue('mig_refmodules', 'main', 'mig_refmodules', '%MIG_HOME%\scripts\refmodules.cfg');
    end;
    
    -----------------------------------------------------------------------------
@@ -480,7 +480,7 @@ IMPLEMENTATION
    function GetReportPllsFilename 
       : varchar2;
    begin
-      result := GetStringValue('mig_reportplls', 'main', 'mig_reportplls', '%MIG_HOME%\skripte\reportplls.cfg');
+      result := GetStringValue('mig_reportplls', 'main', 'mig_reportplls', '%MIG_HOME%\scripts\reportplls.cfg');
    end;
    
    -----------------------------------------------------------------------------
@@ -558,10 +558,10 @@ IMPLEMENTATION
    -----------------------------------------------------------------------------
    -- Return the script directory from configuration
    -----------------------------------------------------------------------------
-   function GetSkriptDir
+   function GetScriptDir
       : varchar2;
    begin
-      result := GetStringValue('mig_skript_dir', 'main', 'mig_skript_dir', '%MIG_HOME%\skripte');
+      result := GetStringValue('MIG_SCRIPT_DIR', 'main', 'MIG_SCRIPT_DIR', '%MIG_HOME%\scripts');
    end;
    
    -----------------------------------------------------------------------------

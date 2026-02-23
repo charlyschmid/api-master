@@ -5,7 +5,7 @@ echo Log Compiler Errors Forms 12c
 
 call %MIG_HOME%\bin\setenv.bat
 
-set MIG_CMD=%MIG_SKRIPT_DIR%\mig_errors.p2s
+set MIG_CMD=%MIG_SCRIPT_DIR%\mig_errors.p2s
 set LOGFILE=errors_%LOG_DATE%_%LOG_TIME%.log
 
 echo.
